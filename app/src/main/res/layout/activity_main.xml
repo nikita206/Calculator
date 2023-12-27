@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -37,7 +38,20 @@
                 android:backgroundTint="#3E6680"
                 android:text="+/-"
                 android:textSize="25sp"
-                app:cornerRadius="40dp" />
+                app:cornerRadius="40dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/percentButton"
+                app:cornerRadius="40dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="%"
+                android:textSize="35sp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#3E6680"
+                />
         </LinearLayout>
 
 
