@@ -49,6 +49,10 @@ public final class MainActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-
+        MaterialButton button = (MaterialButton) v;
+        String text = button.getText().toString();
+        String toAdd = calcTv.getText().toString();
+        String added = toAdd + text;
+        calcTv.setText(added);
     }
 }
