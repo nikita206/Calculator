@@ -68,6 +68,62 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/clearButton"
+                app:cornerRadius="40dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="7"
+                android:textSize="35sp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#3E6680"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/negateButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="#3E6680"
+                android:text="8"
+                android:textSize="25sp"
+                app:cornerRadius="40dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/percentButton"
+                app:cornerRadius="40dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="9"
+                android:textSize="35sp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#3E6680"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cornerRadius="40dp"
+                android:id="@+id/divideButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="x"
+                android:textSize="35sp"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                android:backgroundTint="#ACCBE1"
+                />
+
+        </LinearLayout>
+
 
 
     </LinearLayout>
