@@ -76,7 +76,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:id="@+id/clearButton"
+                android:id="@+id/buttonSeven"
                 app:cornerRadius="40dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:text="7"
@@ -86,7 +86,7 @@
                 />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/negateButton"
+                android:id="@+id/buttonEight"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -100,7 +100,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:id="@+id/percentButton"
+                android:id="@+id/buttonNine"
                 app:cornerRadius="40dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:text="9"
@@ -113,7 +113,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 app:cornerRadius="40dp"
-                android:id="@+id/divideButton"
+                android:id="@+id/multiplyButton"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:text="x"
                 android:textSize="35sp"
