@@ -6,10 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="80sp"
+        android:textColor="@color/black"
+        android:layout_above="@id/buttons"
+        android:textAlignment="textEnd"
+        android:layout_marginRight="20dp"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_alignParentBottom="true"
         android:id="@+id/buttons">
 
         <LinearLayout
@@ -34,7 +46,7 @@
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="8dp"
+                android:layout_margin="10dp"
                 android:backgroundTint="#3E6680"
                 android:text="+/-"
                 android:textSize="25sp"
