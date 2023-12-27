@@ -27,7 +27,20 @@
                 android:layout_margin="12dp"
                 android:backgroundTint="#3E6680"
                 />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/negateButton"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="#3E6680"
+                android:text="+/-"
+                android:textSize="25sp"
+                app:cornerRadius="40dp" />
         </LinearLayout>
+
+
 
     </LinearLayout>
 
