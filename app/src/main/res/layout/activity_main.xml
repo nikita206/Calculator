@@ -9,6 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/finalText"
         android:text="0"
         android:textSize="80sp"
         android:textColor="@color/black"
