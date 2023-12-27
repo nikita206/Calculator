@@ -61,9 +61,11 @@
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:text="/"
                 android:textSize="35sp"
+                android:textColor="@color/black"
                 android:layout_margin="12dp"
-                android:backgroundTint="#3E6680"
+                android:backgroundTint="#ACCBE1"
                 />
+
         </LinearLayout>
 
 
