@@ -7,6 +7,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.calculator.R.layout;
 import com.google.android.material.button.MaterialButton;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
 
 import kotlin.Metadata;
 import org.jetbrains.annotations.Nullable;
@@ -16,7 +18,7 @@ public final class MainActivity extends AppCompatActivity implements View.OnClic
     MaterialButton clear, negate, percent, period, equals;
     MaterialButton divide, multiply, subtract, addition;
     MaterialButton buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive, buttonSix,
-            buttonSeven, buttonEight, buttonNine;
+            buttonSeven, buttonEight, buttonNine, buttonZero;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(layout.activity_main);
@@ -40,6 +42,7 @@ public final class MainActivity extends AppCompatActivity implements View.OnClic
         helperID(buttonSeven, R.id.buttonSeven);
         helperID(buttonEight, R.id.buttonEight);
         helperID(buttonNine, R.id.buttonNine);
+        helperID(buttonZero, R.id.buttonZero);
     }
 
     void helperID(MaterialButton button, int id){
@@ -51,8 +54,34 @@ public final class MainActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         MaterialButton button = (MaterialButton) v;
         String text = button.getText().toString();
+        if(text.equals("C")){
+            resultTv.setText("0");
+            calcTv.setText("");
+            return;
+        }
         String toAdd = calcTv.getText().toString();
         String added = toAdd + text;
         calcTv.setText(added);
+        String finalResult = getResult(added);
+        if(!finalResult.equals("Error")){
+            resultTv.setText(finalResult);
+        }
+        if(text.equals("=")){
+            calcTv.setText(resultTv.getText());
+            return;
+        }
+    }
+
+    String getResult(String data){
+        try {
+            Context context = Context.enter();
+            context.setOptimizationLevel(-1);
+            Scriptable scriptable = context.initStandardObjects();
+            String finalResult = context.evaluateString(scriptable, data, "JavaScript", 1, null).toString();
+            return finalResult;
+        }catch (Exception e){
+            return "Error";
+        }
+
     }
 }
